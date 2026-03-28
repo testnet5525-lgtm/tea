@@ -1,0 +1,10 @@
+services:
+  - type: static
+    name: loreni-tea
+    env: static
+    buildCommand: echo "No build required"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        src: /.*
+        dest: /index.html
